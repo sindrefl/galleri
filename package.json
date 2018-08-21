@@ -1,6 +1,10 @@
 {
   "scripts": {
-    "start": "node server/server.js"
+  	   "start": "node server/server.js",
+       "start:dev": "NODE_ENV=development node server.js",
+       "build": "webpack --config webpack.prod.js",
+       "heroku-postbuild": "npm run build",
+       "lint": "eslint client/**/{*.js,*.jsx}"
   },
   "dependencies": {
     "eslint": "^5.4.0",
